@@ -1,0 +1,180 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/661/661346.png">
+        <title>iCelsius</title>
+
+        <!-- CSS FILES -->
+        <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+        <link href="{%static 'css/bootstrap-icons.css'%}" rel="stylesheet">
+
+        <link href="{%static 'css/templatemo-kind-heart-charity.css'%}" rel="stylesheet">
+
+    </head>
+<body id="section_1">
+<header class="site-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-geo-alt me-2"></i>
+                            OUJDA-ENSAO
+                        </p>
+
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:meriem1tahri@gmail.com">
+                                meriem1tahri@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                    <a href="https://www.linkedin.com/in/meriem-tahri-a4921a240/" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://web.facebook.com/riem.mee24/" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/tahrii_meriiem/" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+<nav class="navbar navbar-expand-lg bg-light shadow-lg" z-index="1">
+            <div class="container">
+                <a class="navbar-brand" href="http://127.0.0.1:8000">
+                    <img src="https://cdn-icons-png.flaticon.com/512/661/661346.png" class="logo img-fluid" >
+                    <span>
+                        iCelsius
+                        <small>temperature anywhere</small>
+                    </span>
+                </a>
+            </div>
+        </nav>
+<main>
+    <section class="section-padding" id="sect">
+                <div class="container">
+                        <div class="col-lg-10 col-12 text-center mx-auto">
+                            <h2 class="mb-5"><strong>History </strong> 24/hours</h2>
+                        </div>
+                        <div class="containerhistory24">
+                            <table id="table">
+                                <thead id="thead">
+                                <tr>
+                                    <th class="th">Identifiant</th>
+                                    <th class="th">Temperature</th>
+                                    <th class="th">Date</th>
+                                </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                {% for i in tab %}
+                                <tr>
+                                    <td class="td">{{i.id}}</td>
+                                    <td class="td">{{i.temp}} °C</td>
+                                    <td class="td">{{i.dt}}</td>
+                                </tr>
+                                {%endfor%}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+</main>
+<footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="https://cdn-icons-png.flaticon.com/512/661/661346.png" class="logo img-fluid" alt="">
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+                        <p class="text-white d-flex mt-3">
+                             <a>TAHRI Meriem</a>
+                        </p>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+                            <a href="tel: 120-240-9600" class="site-footer-link">
+                                0778107511
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                meriem1tahri@gmail.com
+                            </a>
+                        </p>
+                        <p class="text-white d-flex mt-3">
+                            <a href="https://goo.gl/maps/4vKVmbgNtdf8dckG7">
+                                <i class="bi-geo-alt me-2"></i>
+                                OUJDA-ENSAO
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <p class="copyright-text mb-0">Copyright © Décembre 2022 <a href="#">iCelsius</a>
+                        </div>
+
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src="static/js/click-scroll.js"></script>
+        <script src="static/js/counter.js"></script>
+        <script src="static/js/custom.js"></script>
+
+    </body>
+</html>
